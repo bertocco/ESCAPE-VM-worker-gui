@@ -1,0 +1,30 @@
+
+{% extends "pages/page.html" %}
+
+{% block title %}Create Server Success{% endblock title %}
+
+{% block content %}
+
+<h1>Server creation result</h1>
+
+        <p class="Success">
+          Server successfully created:
+        </p>
+	<table>
+         <tr>
+		 <td>Server name: </td> <td>{{ vmname }}</td>
+         </tr>
+	 <tr>
+             <td>Server IP:</td> <td> {{ pubip }}</td>
+         </tr>
+	 <tr>
+	     <td>Access user:</td> <td> ubuntu</td>
+         </tr>
+	 <tr>
+	     <td>Connect using:</td> <td> ssh ubuntu@{{ pubip }}</td>
+         </tr>
+     </table>
+
+
+{% endblock content %}
+

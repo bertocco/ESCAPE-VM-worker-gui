@@ -1,0 +1,30 @@
+{% extends "pages/page.html" %}
+
+{% block title %}Create server page{% endblock title %}
+
+{% block content %}
+
+<h1>Create Server</h1>
+
+{% if submitted %}
+        <p class="Success">
+          Server successfully created:
+        </p>
+
+{% else %}
+
+    <form action="" method="post" novalidate>
+    <table>
+         {{ createvmform.as_table }}
+         <tr>
+             <td>&nbsp;</td>
+             <td><input type="submit" value="Submit"></td>
+         </tr>
+     </table>
+ {% csrf_token %}
+    </form>
+
+{% endif %}
+
+{% endblock content %}
+

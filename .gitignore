@@ -1,0 +1,10 @@
+env
+db.sqlite3
+vmmanager/__pycache__
+pages/migrations
+pages/__pycache__
+createvm/api/__pycache__
+createvm/migrations
+createvm/__pycache__
+createvm/db.sqlite3
+

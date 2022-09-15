@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+<meta charset="utf-8">
+<title>
+        {% block title %}
+        Untitled document
+        {% endblock title %}
+ </title>
+<link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+  <aside id="leftsidebar">
+    <nav id="nav">
+    <ul>
+	<li><a href="/">Home</a></li>
+        <li><a href="/createvm">Create Server</a></li>
+        <li><a href="/deletevm">Delete Server</a></li>
+        <li><a href="/showvm">Show Server</a></li>
+	<li><a href="/loadkey">Create Access Key</a></li>
+    </ul>
+    </nav>
+  </aside>
+      <section id="main">
+      {% block content %}
+      <h1>Welcome!</h1>
+      <p>This is the site template</p>
+      {% endblock content %}
+    </section>
+    <footer id="footer">ESCAPE EU project</footer>
+</div>
+<body>
+</html>
